@@ -146,6 +146,8 @@ export class TestsService {
     if (!test) {
       throw new NotFoundException('Test not found');
     }
+
+    // console.log(data)
   
     // 2) Create a test result record with the user details
     const testResult = await this.prisma.testResult.create({
